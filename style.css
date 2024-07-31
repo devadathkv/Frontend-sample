@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #fff;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    height: 130px;
+    width: 100%;
+    /* background-color: darkblue; */
+    display: flex;
+    align-items: center;
+    gap : 30px;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 99; /* to bring nav to the front. epozhum work akum*/
+    padding: 0 150px; /* this zero in 0 150 is very imp */
+}
+
+#nav img{
+    height: 75px;
+}
+
+#nav h4{
+    text-transform: uppercase;
+    font-weight:450;
+}
+/* 
+#cursor{
+    height: 300px;
+    width:300px;
+    background-color: rgb(0, 245, 249);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99; /*to fix etom melil */
+
+/* #cursor-blur{
+    height: 25px;
+    width:25px;
+    background-color: rgb(0, 245, 249);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99; /*to fix etom melil */
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index:-1;
+}
+
+#main{ /* wraps all the pages */
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.436) ;
+
+}
+
+/* all pages in main must be have position relative.
+position : absolute maximum korkan nokua.
+ */
+
+#page1{
+    height: 100vh;
+    width:100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* as you can see, we can later design the way the flex lies ie either row or column*/
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before{
+    content: "THE COCHIN PET CENTRE";
+    position: absolute;
+    color: rgb(0, 189, 199); 
+    top: -4px;
+    left: -4jjpx;
+    -webkit-text-stroke: 0.5px rgb(0, 79, 118);
+}
+
+#page1 h2{
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+ 
+#page1 p{
+    font-size: 18px;
+    font-weight: 0;
+    align-items: center;
+    width: 40%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#page2{
+    height:100vh;
+    width: 100%;
+}
+
+ #scroller{
+    /* background-color: rgb(45, 9, 79); */
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x:auto;
+
+ }
+  
+  #scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  #scroller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-right: 10px;
+    -webkit-text-stroke: 3px blue;
+    color: transparent;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(100%); /* Start from the right side */
+    }
+    to {
+      transform: translateX(-100%); /* Move to the left */
+    }
+  }
+  
+  /* Hide scrollbar for webkit browsers */
+  #scroller::-webkit-scrollbar {
+    display: none;
+  }
+  
